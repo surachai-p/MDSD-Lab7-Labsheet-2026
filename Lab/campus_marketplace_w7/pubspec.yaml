@@ -29,10 +29,11 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
-      sdk: flutter
-    http: ^1.2.2        # พิมพ์เพิ่มบรรทัดนี้
-    provider: ^6.1.2    # พิมพ์เพิ่มบรรทัดนี้
-    cupertino_icons: ^1.0.8
+    sdk: flutter
+  http: ^1.2.2
+  provider: ^6.1.2
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
