@@ -1,5 +1,3 @@
-# ใบงานปฏิบัติสัปดาห์ที่ 7: Google AI Studio & Gemini API Integration
-
 **วิชา** การพัฒนาซอฟต์แวร์สำหรับอุปกรณ์เคลื่อนที่ | **เครื่องมือ** Flutter, http package, image_picker, Google AI Studio, Gemini API
 
 ---
@@ -461,9 +459,11 @@ flutter run
 
 > ✅ **Checkpoint 0.1** ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) หน้า Home ที่แสดงรายการสินค้าจริงจาก API และ (ข) หน้า Checkout ที่มีสินค้าที่เพิ่มไว้ เป็นหลักฐานว่าโปรเจกต์ตั้งต้นถูกต้องสมบูรณ์ก่อนเริ่มทำเนื้อหา Gemini API ต่อ
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+<img width="1312" height="918" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 14 14 13" src="https://github.com/user-attachments/assets/3aaa1578-91dd-4af6-8fe7-286556ac7e68" />
+<img width="1312" height="918" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 14 14 27" src="https://github.com/user-attachments/assets/022931d2-8db8-4266-b3d6-0f90854fd655" />
+<img width="1312" height="918" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 14 14 30" src="https://github.com/user-attachments/assets/63379469-e0ec-4c76-ab60-fb02e49b9874" />
+
+
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -494,9 +494,15 @@ flutter run
 
 > ✅ **Checkpoint 1.1** ถ่ายภาพหน้าจอ Google AI Studio ที่แสดงรูปภาพที่แนบ Prompt ที่ใช้ และผลลัพธ์ JSON ที่ได้ จากนั้นทดลองรันซ้ำอีก 2 ครั้งด้วยภาพและ Prompt เดิม
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+## ครั้งที่ 1
+<img width="936" height="544" alt="image" src="https://github.com/user-attachments/assets/ee452bb2-2569-4560-8cc5-a6370cf801dc" />
+
+## ครั้งที่ 2 
+<img width="934" height="557" alt="image" src="https://github.com/user-attachments/assets/29a6a860-e220-44e6-9b8b-2ee35bfaa5bc" />
+
+## ครั้งที่ 3 
+<img width="929" height="592" alt="image" src="https://github.com/user-attachments/assets/ddd86983-f767-442d-b608-0fa7471f5289" />
+
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
@@ -504,8 +510,12 @@ flutter run
 
 > ✅ **Checkpoint 1.2** ถ่ายภาพหน้าจอที่แสดงการตั้งค่า Structured Output และผลลัพธ์ที่ได้ อธิบายว่าผลลัพธ์ที่ได้ต่างจากตอนไม่เปิด Structured Output ในขั้นตอน 1.1 อย่างไร (อ้างอิงบทหนังสือเรียนหัวข้อ 7.4)
 
-```text
-บันทึกผลลัพธ์ที่นี่
+<img width="1238" height="534" alt="image" src="https://github.com/user-attachments/assets/1a50c51c-2d39-4681-9a75-eb48078aab6a" />
+
+```
+ 1.1 โมเดลอาจใส่ข้อความอื่นปน หรือครอบด้วย markdown ได้ ส่วน 1.2 ได้ JSON ล้วนทุกครั้ง
+ 1.1 โมเดลอาจตั้งชื่อหรือจัดโครงสร้างเพี้ยนไปได้ ส่วน 1.2 ต้องเป็น title, category, description ตาม Schema เสมอ
+ 1.1 ไม่มีการตรวจชนิดข้อมูล ส่วน 1.2 ระบบรับประกันว่าทุก field เป็น String
 ```
 
 ---
@@ -528,12 +538,12 @@ flutter run
 
 เพิ่มปุ่มทดสอบชั่วคราวในหน้าใดก็ได้ของแอป ที่เรียก `GeminiService().generateText('ช่วยแต่งประโยคทักทายลูกค้าร้านค้าออนไลน์แบบเป็นกันเอง')` แล้วแสดงผลลัพธ์ด้วย `SnackBar` และ `print()` ใน Debug Console (ดูตัวอย่างจาก ขั้นตอนที่ 3.1 ของใบงาน 6)
 
+<img width="1312" height="918" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 14 43 23" src="https://github.com/user-attachments/assets/ac8869f2-0f76-45ab-8544-e7d2c0b4ea88" />
 
 > ✅ **Checkpoint 2.1** รันแอปด้วยคำสั่ง `flutter run --dart-define=GEMINI_API_KEY=your_key` ถ่ายภาพหน้าจอ Debug Console และหน้า SnackBar ที่แสดงข้อความคำตอบจาก Gemini และอธิบายด้านล่าง ว่า `.timeout()` ที่ตั้งไว้กับ Gemini API (20 วินาที) ต่างจากที่ตั้งไว้กับ OpenWeather API ในสัปดาห์ที่แล้ว (10 วินาที) อย่างไร และทำไมจึงต่างกัน (อ้างอิงบทหนังสือเรียนหัวข้อ 7.3)
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="1151" height="222" alt="image" src="https://github.com/user-attachments/assets/00bd6f89-2cb0-4307-bdd4-b500dcb1dd3b" />
+
 
 ---
 
@@ -897,9 +907,14 @@ class MyApp extends StatelessWidget {
 
 > ✅ **Checkpoint 3.1** รันแอปแล้วทดสอบกด Bottom Navigation Bar สลับไปมาระหว่าง "หน้าหลัก" กับ "ลงประกาศขาย" อย่างน้อย 3 รอบ ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) Tab หน้าหลักที่มี Bottom Navigation Bar แสดงอยู่ด้านล่าง และ (ข) Tab ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว จากนั้นทดสอบเพิ่มเติมว่าเลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่หรือไม่ (ถ้าหายไป แปลว่ายังใช้ `IndexedStack` ไม่ถูกต้อง ให้ตรวจสอบโค้ดใน `MainScaffold` อีกครั้ง) และทดสอบว่าไอคอนตะกร้าใน AppBar ของ Tab หน้าหลักยังกดไปหน้า Checkout ได้ตามปกติเหมือนที่ทดสอบไว้แล้วใน Checkpoint 0.1
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 20 09" src="https://github.com/user-attachments/assets/98843c1e-6559-448d-879d-f115d3b99fb5" />
+
+## เลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 22 55" src="https://github.com/user-attachments/assets/fa42f57a-9e55-4dab-9666-a566a846142a" />
+
+## ตะกร้าใน AppBar ของ Tab หน้าหลักยังกดไปหน้า Checkout ได้ตามปกติ
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 23 41" src="https://github.com/user-attachments/assets/4df39f14-29c7-435a-91ab-e886fd5513ce" />
+
 
 ---
 
@@ -945,10 +960,13 @@ class ListingDraft {
 
 > ✅ **Checkpoint 4.1** รันแอปแล้วทดสอบเลือกภาพสินค้าจริง กดปุ่ม "ให้ AI ช่วยแนะนำ" ถ่ายภาพหน้าจอผลลัพธ์ที่ AI วิเคราะห์ได้ (title/category/description) ทดสอบซ้ำกับภาพสินค้าอย่างน้อย 3 ภาพที่ต่างกัน แนบภาพหน้าจอทั้ง 3 กรณี 
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
----
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 37 18" src="https://github.com/user-attachments/assets/dbfde547-ba71-493e-a76c-b49fd104b457" />
+
+<img width="1146" height="846" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 37 45" src="https://github.com/user-attachments/assets/c3497b5f-f1c4-4551-9791-d789b0ec4d8a" />
+
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 37 57" src="https://github.com/user-attachments/assets/93f506a6-735b-4eea-a010-f7fba0a55252" />
+
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 38 10" src="https://github.com/user-attachments/assets/0c0364c1-7b32-41de-ac4f-03151dedb649" />
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
 
@@ -965,9 +983,11 @@ class ListingDraft {
 เพิ่มปุ่มที่เก็บค่าจากฟอร์ม (ซึ่งอาจถูกผู้ใช้แก้ไขแล้วหรือไม่ก็ได้) เป็นร่างประกาศฉบับสุดท้ายไว้ใน State ของแอป (ยังไม่ต้องบันทึกถาวร เพราะเรื่อง Local Database อยู่ในสัปดาห์ที่ 8) หลังยืนยันสำเร็จ ให้แสดง `SnackBar` ยืนยัน (เช่น "บันทึกร่างประกาศเรียบร้อยแล้ว") แล้วล้างฟอร์ม (รูปภาพที่เลือก, ค่าใน `TextEditingController` ทั้ง 3 ช่อง) กลับสู่สถานะว่างเปล่าพร้อมเริ่มลงประกาศใหม่ **ไม่ต้อง `Navigator.pop()`** เหมือนหน้าที่เปิดด้วย `Navigator.push` เพราะตอนนี้ `SellItemPage` เป็น Tab หนึ่งใน Bottom Navigation Bar แล้ว (ตั้งแต่ขั้นตอนที่ 3.3) ไม่ได้ถูกเปิดแบบ Push/Pop อีกต่อไป ผู้ใช้ที่ต้องการกลับหน้าหลักให้กดที่ Tab "หน้าหลัก" ด้านล่างจอเองแทน
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ 2 ภาพเทียบกัน คือ (ก) ค่าที่ AI แนะนำมาตอนแรก และ (ข) ค่าหลังจากคุณแก้ไขบางส่วนแล้วกดยืนยัน 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+
+<img width="1146" height="846" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 45 38" src="https://github.com/user-attachments/assets/d046d2fa-3528-467f-9638-04be1812cca1" />
+
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 53 24" src="https://github.com/user-attachments/assets/15f42d24-46bc-42da-9e23-a0cd508a5e0c" />
+
 
 ---
 
@@ -994,9 +1014,13 @@ class ListingDraft {
 
 > ✅ **Checkpoint 6.1** ถ่ายภาพหน้าจอ Error ที่แอปแสดงเมื่อ Gemini ปฏิเสธคำขอ  จากนั้น**เปลี่ยน `_prompt` ใน `sell_item_page.dart` กลับเป็นเวอร์ชันที่ใช้งานจริงตามส่วนที่ 4** ก่อนส่งงาน ⚠️ ขั้นตอนนี้สำคัญมาก ถ้าลืมเปลี่ยนกลับ ฟีเจอร์หลักของแอปจะใช้งานไม่ได้เลย เพราะ Prompt ที่เหลือทิ้งไว้จะถูก Gemini บล็อกทุกครั้ง
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+## Gemini ปฏิเสธคำขอ
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 58 40" src="https://github.com/user-attachments/assets/8f83fc96-c260-4f9a-9ccb-ca0db8226fd2" />
+
+
+## กลับมาเหมือนเดิม
+<img width="1212" height="912" alt="ภาพถ่ายหน้าจอ 2569-10-02 เวลา 15 59 33" src="https://github.com/user-attachments/assets/14c4c34a-7834-46bd-bf90-f023b1f4eb65" />
+
 ---
 
 
