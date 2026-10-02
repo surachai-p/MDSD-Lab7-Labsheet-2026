@@ -528,11 +528,9 @@ flutter run
 
 
 > ✅ **Checkpoint 2.1** รันแอปด้วยคำสั่ง `flutter run --dart-define=GEMINI_API_KEY=your_key` ถ่ายภาพหน้าจอ Debug Console และหน้า SnackBar ที่แสดงข้อความคำตอบจาก Gemini และอธิบายด้านล่าง ว่า `.timeout()` ที่ตั้งไว้กับ Gemini API (20 วินาที) ต่างจากที่ตั้งไว้กับ OpenWeather API ในสัปดาห์ที่แล้ว (10 วินาที) อย่างไร และทำไมจึงต่างกัน (อ้างอิงบทหนังสือเรียนหัวข้อ 7.3)
-
-```text
-บันทึกผลลัพธ์ที่นี่
-```
-
+<img width="1132" height="482" alt="image" src="https://github.com/user-attachments/assets/9a4357e0-dffc-41de-ac20-98567b268beb" />
+- OpenWeather API (10 วินาที): เป็นบริการดึงข้อมูลที่มีโครงสร้างคงที่ (Static / Cached structured data) เซิร์ฟเวอร์ทำเพียงค้นหาข้อมูลอุณหภูมิ/สภาพอากาศในฐานข้อมูลหรือแคชแล้วส่ง JSON กลับทันที จึงใช้เวลาสั้นมาก (ปกติ 1–2 วินาที) การตั้ง 10 วินาทีจึงเพียงพอสำหรับครอบคลุม Network latency
+- Gemini API (20 วินาที): เป็น Generative AI / Large Language Model (LLM) เซิร์ฟเวอร์ต้องทำการประมวลผลคำนวณเชิงลึก (Real-time Inference) เพื่อวิเคราะห์ความหมายของ Prompt และสร้างข้อความตอบกลับแบบ Token-by-token ซึ่งใช้ทรัพยากรการประมวลผลสูงกว่าการสืบค้นฐานข้อมูลปกติหลายเท่าตัว
 ---
 
 ## ส่วนที่ 3: สร้างหน้าจอ "ลงประกาศขายสินค้า" และเชื่อมเข้ากับ Navigation
