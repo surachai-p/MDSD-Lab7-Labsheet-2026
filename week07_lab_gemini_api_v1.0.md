@@ -462,8 +462,15 @@ flutter run
 > ✅ **Checkpoint 0.1** ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) หน้า Home ที่แสดงรายการสินค้าจริงจาก API และ (ข) หน้า Checkout ที่มีสินค้าที่เพิ่มไว้ เป็นหลักฐานว่าโปรเจกต์ตั้งต้นถูกต้องสมบูรณ์ก่อนเริ่มทำเนื้อหา Gemini API ต่อ
 
 ```text
-บันทึกรูปผลลัพธ์ที่นี่
+screenshots/cp0.1-checkout.png
+screenshots/cp0.1-home-cart.png
 ```
+
+![cp0.1-home](screenshots/cp0.1-home.png)
+
+![cp0.1-home-cart](screenshots/cp0.1-home-cart.png)
+
+![cp0.1-checkout](screenshots/cp0.1-checkout.png)
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -495,8 +502,10 @@ flutter run
 > ✅ **Checkpoint 1.1** ถ่ายภาพหน้าจอ Google AI Studio ที่แสดงรูปภาพที่แนบ Prompt ที่ใช้ และผลลัพธ์ JSON ที่ได้ จากนั้นทดลองรันซ้ำอีก 2 ครั้งด้วยภาพและ Prompt เดิม
 
 ```text
-บันทึกรูปผลลัพธ์ที่นี่
+screenshots/cp1.1.png
 ```
+
+![cp1.1](screenshots/cp1.1.png)
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
@@ -505,8 +514,10 @@ flutter run
 > ✅ **Checkpoint 1.2** ถ่ายภาพหน้าจอที่แสดงการตั้งค่า Structured Output และผลลัพธ์ที่ได้ อธิบายว่าผลลัพธ์ที่ได้ต่างจากตอนไม่เปิด Structured Output ในขั้นตอน 1.1 อย่างไร (อ้างอิงบทหนังสือเรียนหัวข้อ 7.4)
 
 ```text
-บันทึกผลลัพธ์ที่นี่
+screenshots/cp1.1.png
 ```
+
+![cp1.1](screenshots/cp1.1.png)
 
 ---
 
@@ -534,6 +545,8 @@ flutter run
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+
+![cp2.1-snackbar](screenshots/cp2.1-snackbar.png)
 
 ---
 
@@ -901,6 +914,14 @@ class MyApp extends StatelessWidget {
 บันทึกผลลัพธ์ที่นี่
 ```
 
+![cp3.1-tab-home](screenshots/cp3.1-tab-home.png)
+
+![cp3.1-tab-sell-empty](screenshots/cp3.1-tab-sell-empty.png)
+
+![cp3.1-tab-sell](screenshots/cp3.1-tab-sell.png)
+
+![cp3.1-state-kept](screenshots/cp3.1-state-kept.png)
+
 ---
 
 ## ส่วนที่ 4: เชื่อม Gemini Vision เข้ากับหน้าลงประกาศขาย
@@ -948,6 +969,18 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+
+![cp4.1-loading](screenshots/cp4.1-loading.png)
+
+![cp4.1-img1-coat](screenshots/cp4.1-img1-coat.png)
+
+![cp4.1-img2-electronics](screenshots/cp4.1-img2-electronics.png)
+
+![cp4.1-img3-cards](screenshots/cp4.1-img3-cards.png)
+
+![cp4.1-img4-lamp](screenshots/cp4.1-img4-lamp.png)
+
+![cp4.1-error-429](screenshots/cp4.1-error-429.png)
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -968,6 +1001,12 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+
+![cp5.1-before](screenshots/cp5.1-before.png)
+
+![cp5.1-edited](screenshots/cp5.1-edited.png)
+
+![cp5.1-after](screenshots/cp5.1-after.png)
 
 ---
 
@@ -997,6 +1036,10 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+
+![cp6.1-blocked](screenshots/cp6.1-blocked.png)
+
+![cp6.1-restored](screenshots/cp6.1-restored.png)
 ---
 
 
