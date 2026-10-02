@@ -464,6 +464,11 @@ flutter run
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="1302" height="991" alt="image" src="https://github.com/user-attachments/assets/a0a65083-e181-40c0-98ae-665bb406f345" />
+
+<img width="1307" height="996" alt="image" src="https://github.com/user-attachments/assets/e7a68b5a-dd73-49ce-9f55-9457be2e89e8" />
+
+
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -497,6 +502,8 @@ flutter run
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="648" height="697" alt="image" src="https://github.com/user-attachments/assets/fa4289f2-4953-4200-8209-81181f4950aa" />
+
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
@@ -507,6 +514,12 @@ flutter run
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="938" height="697" alt="image" src="https://github.com/user-attachments/assets/4743d934-c476-45dd-a963-283c735b0829" />
+
+<img width="1192" height="657" alt="image" src="https://github.com/user-attachments/assets/dfc748b1-7c41-46f3-a5ff-cabcbb81b218" />
+
+การทดสอบแบบ Prompt ธรรมดา (ไม่ได้เปิด Structured Output):โมเดลตอบกลับมาเป็นข้อความธรรมดา (Plain Text / Markdown) แม้จะมีรูปแบบคล้าย JSON ตามที่สั่งใน Prompt   ข้อจำกัด: ไม่สามารถการันตีความถูกต้องของรูปแบบข้อมูลได้ 100% มีโอกาสเกิดข้อผิดพลาดในการแปลงข้อมูล (jsonDecode) บน Flutter หากโมเดลใส่ข้อความเกริ่นนำ, สรุปท้าย หรือแท็กครอบโค้ด (เช่น json ... )
+การทดสอบแบบเปิดใช้งาน Structured Output (Response Schema):มีการกำหนด Schema ด้วย Visual Editor ชัดเจน (ประกอบด้วยฟิลด์ title, category, และ description เป็นประเภท String ทั้งหมด)โมเดลส่งผลลัพธ์ออกมาเป็น Valid JSON แท้จริงโดยตรง (<> JSON)
 
 ---
 
@@ -534,6 +547,13 @@ flutter run
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="1307" height="950" alt="image" src="https://github.com/user-attachments/assets/312884db-d870-40a7-a7b5-25de1132e182" />
+
+<img width="880" height="161" alt="image" src="https://github.com/user-attachments/assets/8340f24d-62d4-45ae-bf39-7b188b00d013" />
+
+OpenWeather API ใช้เวลาเพียง 10 วินาที เพราะเป็นการดึงข้อมูลที่มีอยู่แล้วจากฐานข้อมูลซึ่งตอบกลับได้ในเสี้ยววินาที
+
+ส่วน Gemini API ต้องตั้งไว้นานกว่าเป็น 20 วินาที เพื่อเผื่อเวลาให้ระบบ AI คิดและสร้างประโยคใหม่ทีละคำ รวมถึงรองรับข้อมูลที่ซับซ้อนโดยไม่ตัดการเชื่อมต่อก่อน
 
 ---
 
@@ -900,6 +920,10 @@ class MyApp extends StatelessWidget {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="442" height="1022" alt="image" src="https://github.com/user-attachments/assets/041435f1-ce3c-478d-a21a-acdab6adc527" />
+
+<img width="446" height="1020" alt="image" src="https://github.com/user-attachments/assets/58e2b2f6-456f-4ade-93a8-49d227296c9c" />
+
 
 ---
 
@@ -948,6 +972,13 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="442" height="1021" alt="image" src="https://github.com/user-attachments/assets/f9588728-3e23-490f-9b63-da517130e766" />
+
+<img width="442" height="1023" alt="image" src="https://github.com/user-attachments/assets/d91c5db4-83b0-4b94-83e4-7d2dc0d2f683" />
+
+<img width="442" height="1025" alt="image" src="https://github.com/user-attachments/assets/71338773-f4a5-43d5-afff-af1a7cdf8def" />
+
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -968,6 +999,12 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="446" height="1025" alt="image" src="https://github.com/user-attachments/assets/f419c6af-8bfb-4f12-9902-368d987d0263" />
+
+<img width="435" height="907" alt="image" src="https://github.com/user-attachments/assets/38a24c7e-e7af-4116-aa7d-c45d328b5fc7" />
+
+<img width="437" height="260" alt="image" src="https://github.com/user-attachments/assets/7aaee341-546d-4b59-8cc4-b67dbbb8f74b" />
+
 
 ---
 
@@ -997,6 +1034,8 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="430" height="1027" alt="image" src="https://github.com/user-attachments/assets/1582afa6-079c-4125-b026-418d82a0e812" />
+
 ---
 
 
