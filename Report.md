@@ -16,15 +16,25 @@
 
 แนบภาพหน้าจอจากการทดลอง Prompt และผลลัพธ์ JSON ทั้ง 3 ครั้ง:
 
-1. ครั้งที่ 1:![alt text](/image/image-2.png)
-2. ครั้งที่ 2:![alt text](/image/image-3.png)
-3. ครั้งที่ 3:![alt text](/image/image-4.png)
+1. ครั้งที่ 1:
+
+![alt text](/image/image-2.png)
+
+2. ครั้งที่ 2:
+
+![alt text](/image/image-3.png)
+
+3. ครั้งที่ 3:
+
+![alt text](/image/image-4.png)
 
 ## Checkpoint 1.2: Structured Output
 
 แนบภาพหน้าจอการตั้งค่า Structured Output และผลลัพธ์:
 
-ความแตกต่างจากการทดลองใน Checkpoint 1.1:หาไม่เจอครับ![alt text](/image/image-5.png)
+ความแตกต่างจากการทดลองใน Checkpoint 1.1:หาไม่เจอครับ!
+
+[alt text](/image/image-5.png)
 
 ## Checkpoint 2.1: Text Generation
 
