@@ -460,10 +460,12 @@ flutter run
 3. กดไอคอนตะกร้าแล้วไปหน้า Checkout ได้ เห็นรายการสินค้าที่เพิ่งเพิ่มพร้อมราคารวม
 
 > ✅ **Checkpoint 0.1** ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) หน้า Home ที่แสดงรายการสินค้าจริงจาก API และ (ข) หน้า Checkout ที่มีสินค้าที่เพิ่มไว้ เป็นหลักฐานว่าโปรเจกต์ตั้งต้นถูกต้องสมบูรณ์ก่อนเริ่มทำเนื้อหา Gemini API ต่อ
+> ก.
+<img width="1285" height="732" alt="image" src="https://github.com/user-attachments/assets/a8fada8e-9966-4d56-8d97-b41af5122d67" />
+>ข.
+<img width="1285" height="866" alt="image" src="https://github.com/user-attachments/assets/85f01b2f-e2c5-489b-8aed-b25b42e75b6a" />
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -494,19 +496,15 @@ flutter run
 
 > ✅ **Checkpoint 1.1** ถ่ายภาพหน้าจอ Google AI Studio ที่แสดงรูปภาพที่แนบ Prompt ที่ใช้ และผลลัพธ์ JSON ที่ได้ จากนั้นทดลองรันซ้ำอีก 2 ครั้งด้วยภาพและ Prompt เดิม
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+<img width="1917" height="871" alt="image" src="https://github.com/user-attachments/assets/e360a1c8-4410-4e35-befc-82cef444ca91" />
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
 ในแผงตั้งค่าฝั่งขวาของ Google AI Studio เปิดตัวเลือก **Structured Output** เลือกที่ Visual Editor แล้วกำหนด Schema ให้ตรงกับ Field `title`, `category`, `description` ตามที่ใช้ใน Prompt (เลือกประเภทเป็น String ทั้งหมด) รันอีกครั้งด้วยภาพเดิม
 
 > ✅ **Checkpoint 1.2** ถ่ายภาพหน้าจอที่แสดงการตั้งค่า Structured Output และผลลัพธ์ที่ได้ อธิบายว่าผลลัพธ์ที่ได้ต่างจากตอนไม่เปิด Structured Output ในขั้นตอน 1.1 อย่างไร (อ้างอิงบทหนังสือเรียนหัวข้อ 7.4)
-
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+- ตอบ การเปิดใช้ Structured Output เป็นการเปลี่ยนจากการใช้พลังภาษาของ LLM ในการเดารูปแบบข้อความ (Soft Constraint) มาเป็นการใช้ระบบควบคุมระดับกักขอบเขตของโทเค็น (Hard Constraint / Constrained Decoding) ซึ่งทำให้ผลลัพธ์มีความเสถียร แม่นยำ และพร้อมสำหรับการเชื่อมต่อกับแอปพลิเคชันจริง (Production-ready Integration) มากกว่าการใช้ Prompt สั่งเพียงอย่างเดียว
+<img width="1902" height="877" alt="image" src="https://github.com/user-attachments/assets/e455435f-fa91-4968-ba97-67b5f37d0d7e" />
 
 ---
 
