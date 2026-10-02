@@ -723,6 +723,7 @@ flutter run --dart-define=GEMINI_API_KEY=your_key
 ```
 
 📷 **เตรียมรูปภาพไว้ในเครื่องจำลองก่อนทดสอบขั้นตอนที่ 3.2**: Emulator/Simulator เป็นเครื่องเปล่า ไม่มีรูปภาพติดมาด้วยตั้งแต่แรก ถ้าไปกดปุ่ม "เลือกรูปภาพสินค้า" ในขั้นตอนถัดไปแล้วเปิดคลังภาพขึ้นมาว่างเปล่า ให้ใส่รูปเข้าไปก่อนตามนี้
+<img width="330" height="312" alt="image" src="https://github.com/user-attachments/assets/d22e48ee-2139-43f7-9902-f992b05b6a3a" />
 
 > 🍏 **iOS Simulator**: ลากไฟล์รูปภาพ (เช่น `.jpg`/`.png` จากเครื่อง Mac) จาก Finder ไปวางลงบนหน้าจอ Simulator โดยตรง (วางตรงพื้นหลัง Home Screen ก็ได้ ไม่ต้องเปิดแอปใดค้างไว้) รูปจะถูกเพิ่มเข้า Photos แอปของ Simulator ให้อัตโนมัติ ทำครั้งเดียวก็พอ ใช้ทดสอบซ้ำได้เรื่อย ๆ หลังจากนั้น (อีกวิธีคือเปิด Safari ใน Simulator ค้นรูปจากเว็บ กด Save Image ก็ได้ผลเหมือนกัน)
 >
@@ -892,10 +893,9 @@ class MyApp extends StatelessWidget {
 > ⚠️ หลังแก้ `lib/main.dart` แล้วให้ **Stop แอปแล้วรัน `flutter run` ใหม่ทั้งหมด** (Hot Reload/Hot Restart ไม่พอ เพราะเป็นการเปลี่ยนโครงสร้าง Widget ตั้งแต่ราก (root) ของแอป)
 
 > ✅ **Checkpoint 3.1** รันแอปแล้วทดสอบกด Bottom Navigation Bar สลับไปมาระหว่าง "หน้าหลัก" กับ "ลงประกาศขาย" อย่างน้อย 3 รอบ ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) Tab หน้าหลักที่มี Bottom Navigation Bar แสดงอยู่ด้านล่าง และ (ข) Tab ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว จากนั้นทดสอบเพิ่มเติมว่าเลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่หรือไม่ (ถ้าหายไป แปลว่ายังใช้ `IndexedStack` ไม่ถูกต้อง ให้ตรวจสอบโค้ดใน `MainScaffold` อีกครั้ง) และทดสอบว่าไอคอนตะกร้าใน AppBar ของ Tab หน้าหลักยังกดไปหน้า Checkout ได้ตามปกติเหมือนที่ทดสอบไว้แล้วใน Checkpoint 0.1
+<img width="271" height="627" alt="image" src="https://github.com/user-attachments/assets/afed8906-37ac-4872-8d07-1a9e1d29343c" />
+<img width="360" height="327" alt="image" src="https://github.com/user-attachments/assets/d41fa086-b278-4ae3-beb6-c43ddcaa9b89" />
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
 
 ---
 
@@ -941,9 +941,9 @@ class ListingDraft {
 
 > ✅ **Checkpoint 4.1** รันแอปแล้วทดสอบเลือกภาพสินค้าจริง กดปุ่ม "ให้ AI ช่วยแนะนำ" ถ่ายภาพหน้าจอผลลัพธ์ที่ AI วิเคราะห์ได้ (title/category/description) ทดสอบซ้ำกับภาพสินค้าอย่างน้อย 3 ภาพที่ต่างกัน แนบภาพหน้าจอทั้ง 3 กรณี 
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="382" height="865" alt="image" src="https://github.com/user-attachments/assets/568153fe-17fb-449f-a56f-8b4d3e621827" />
+<img width="387" height="867" alt="image" src="https://github.com/user-attachments/assets/641259dd-613f-47d5-aefd-7eef375bfb81" />
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -961,9 +961,8 @@ class ListingDraft {
 เพิ่มปุ่มที่เก็บค่าจากฟอร์ม (ซึ่งอาจถูกผู้ใช้แก้ไขแล้วหรือไม่ก็ได้) เป็นร่างประกาศฉบับสุดท้ายไว้ใน State ของแอป (ยังไม่ต้องบันทึกถาวร เพราะเรื่อง Local Database อยู่ในสัปดาห์ที่ 8) หลังยืนยันสำเร็จ ให้แสดง `SnackBar` ยืนยัน (เช่น "บันทึกร่างประกาศเรียบร้อยแล้ว") แล้วล้างฟอร์ม (รูปภาพที่เลือก, ค่าใน `TextEditingController` ทั้ง 3 ช่อง) กลับสู่สถานะว่างเปล่าพร้อมเริ่มลงประกาศใหม่ **ไม่ต้อง `Navigator.pop()`** เหมือนหน้าที่เปิดด้วย `Navigator.push` เพราะตอนนี้ `SellItemPage` เป็น Tab หนึ่งใน Bottom Navigation Bar แล้ว (ตั้งแต่ขั้นตอนที่ 3.3) ไม่ได้ถูกเปิดแบบ Push/Pop อีกต่อไป ผู้ใช้ที่ต้องการกลับหน้าหลักให้กดที่ Tab "หน้าหลัก" ด้านล่างจอเองแทน
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ 2 ภาพเทียบกัน คือ (ก) ค่าที่ AI แนะนำมาตอนแรก และ (ข) ค่าหลังจากคุณแก้ไขบางส่วนแล้วกดยืนยัน 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="382" height="722" alt="image" src="https://github.com/user-attachments/assets/1389e4ef-bba1-4c03-b253-a3b2ba1b46a9" />
+
 
 ---
 
@@ -990,9 +989,8 @@ class ListingDraft {
 
 > ✅ **Checkpoint 6.1** ถ่ายภาพหน้าจอ Error ที่แอปแสดงเมื่อ Gemini ปฏิเสธคำขอ  จากนั้น**เปลี่ยน `_prompt` ใน `sell_item_page.dart` กลับเป็นเวอร์ชันที่ใช้งานจริงตามส่วนที่ 4** ก่อนส่งงาน ⚠️ ขั้นตอนนี้สำคัญมาก ถ้าลืมเปลี่ยนกลับ ฟีเจอร์หลักของแอปจะใช้งานไม่ได้เลย เพราะ Prompt ที่เหลือทิ้งไว้จะถูก Gemini บล็อกทุกครั้ง
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="386" height="856" alt="image" src="https://github.com/user-attachments/assets/43b6c5ed-406b-49cf-9406-197dac83c2de" />
+
 ---
 
 
