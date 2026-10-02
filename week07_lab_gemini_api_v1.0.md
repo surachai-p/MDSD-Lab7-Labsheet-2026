@@ -464,6 +464,12 @@ flutter run
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+## หน้าHome 
+<img width="386" height="878" alt="image" src="https://github.com/user-attachments/assets/bfebca8c-e44e-4138-bb53-41d9203c58ce" />
+
+---
+## หน้าcheckout
+<img width="390" height="827" alt="image" src="https://github.com/user-attachments/assets/b9102c02-58da-4739-90cf-1f2de1eeaf9b" />
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -497,6 +503,11 @@ flutter run
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+## รันครั้งแรก
+<img width="1917" height="867" alt="image" src="https://github.com/user-attachments/assets/a257ea55-ef6a-4e62-a2fe-7823a02d92d1" />
+
+## รันครั้งที่สอง
+<img width="1917" height="881" alt="image" src="https://github.com/user-attachments/assets/c64e46ff-4b34-4640-aa00-3710fe76e247" />
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
@@ -505,8 +516,14 @@ flutter run
 > ✅ **Checkpoint 1.2** ถ่ายภาพหน้าจอที่แสดงการตั้งค่า Structured Output และผลลัพธ์ที่ได้ อธิบายว่าผลลัพธ์ที่ได้ต่างจากตอนไม่เปิด Structured Output ในขั้นตอน 1.1 อย่างไร (อ้างอิงบทหนังสือเรียนหัวข้อ 7.4)
 
 ```text
-บันทึกผลลัพธ์ที่นี่
+ตอนไม่เปิด Structured Output โมเดลตอบเป็นข้อความธรรมดา ต้องพึ่ง Prompt สั่งให้ตอบเป็น JSON จึงอาจมีข้อความอื่นปนมา หรือโครงสร้างไม่คงที่ในแต่ละครั้ง
+ตอนเปิด Structured Output ระบบบังคับให้โมเดลตอบเป็น JSON ตาม Schema ที่กำหนด (title, category, description) ทำให้ได้ผลลัพธ์ที่ถูกโครงสร้างและครบทุก field ทุกครั้ง นำไปใช้ในโปรแกรมต่อได้ทันทีโดยไม่ต้องตัดข้อความส่วนเกิน
 ```
+## การตั้งค่า Structured Output
+<img width="932" height="675" alt="image" src="https://github.com/user-attachments/assets/f98e1720-e63d-4c7e-9d0a-e70e7bdc2db1" />
+
+## ผลลัพธ์ที่ได้
+<img width="1917" height="842" alt="image" src="https://github.com/user-attachments/assets/f5efad09-a588-4966-be02-d180b845a1aa" />
 
 ---
 
@@ -532,8 +549,9 @@ flutter run
 > ✅ **Checkpoint 2.1** รันแอปด้วยคำสั่ง `flutter run --dart-define=GEMINI_API_KEY=your_key` ถ่ายภาพหน้าจอ Debug Console และหน้า SnackBar ที่แสดงข้อความคำตอบจาก Gemini และอธิบายด้านล่าง ว่า `.timeout()` ที่ตั้งไว้กับ Gemini API (20 วินาที) ต่างจากที่ตั้งไว้กับ OpenWeather API ในสัปดาห์ที่แล้ว (10 วินาที) อย่างไร และทำไมจึงต่างกัน (อ้างอิงบทหนังสือเรียนหัวข้อ 7.3)
 
 ```text
-บันทึกผลลัพธ์ที่นี่
+สาเหตุที่ต่างกันคือ OpenWeather เป็นการดึงข้อมูลสภาพอากาศที่มีอยู่แล้วจากฐานข้อมูล จึงตอบเร็วและใช้เวลาค่อนข้างคงที่ ส่วน Gemini เป็นโมเดลภาษาที่ต้องประมวลผล prompt แล้วสร้างข้อความใหม่ขึ้นมา เวลาตอบจึงนานกว่าและไม่แน่นอน
 ```
+<img width="1318" height="1022" alt="image" src="https://github.com/user-attachments/assets/2f8161b6-880d-4bc7-80a9-ce0854ebf1d6" />
 
 ---
 
@@ -900,6 +918,13 @@ class MyApp extends StatelessWidget {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+## Tab หน้าหลักที่มี Bottom Navigation Bar
+<img width="426" height="971" alt="image" src="https://github.com/user-attachments/assets/6bddb488-3211-4db8-9bf3-18a265a3174a" />
+
+## ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว
+<img width="430" height="972" alt="image" src="https://github.com/user-attachments/assets/4455df45-ec00-488a-b918-458c108b767f" />
+<img width="422" height="970" alt="image" src="https://github.com/user-attachments/assets/905fe606-f943-4b21-a3b4-e4fdc5688b27" />
+<img width="415" height="961" alt="image" src="https://github.com/user-attachments/assets/aadc08e2-530a-412c-979b-9904a72d484a" />
 
 ---
 
@@ -948,6 +973,10 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="422" height="952" alt="image" src="https://github.com/user-attachments/assets/e46b7636-be9a-4345-9291-d88b2e5d1103" />
+<img width="432" height="947" alt="image" src="https://github.com/user-attachments/assets/de4ca1e6-28be-4c7d-bebb-4e6dfca6f7ff" />
+<img width="427" height="930" alt="image" src="https://github.com/user-attachments/assets/893590c6-8c7e-414c-9ca8-d888959270c7" />
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -968,6 +997,8 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="417" height="966" alt="image" src="https://github.com/user-attachments/assets/02503e36-0612-49ed-b4cb-d8398dfdc81d" />
+<img width="412" height="960" alt="image" src="https://github.com/user-attachments/assets/196a9914-6c0b-459d-bd07-2fb41e69e61e" />
 
 ---
 
@@ -997,6 +1028,8 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="417" height="973" alt="image" src="https://github.com/user-attachments/assets/0cd917d9-10c8-4411-9cef-a14bbb2ffab7" />
+
 ---
 
 
