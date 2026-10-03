@@ -460,6 +460,8 @@ flutter run
 3. กดไอคอนตะกร้าแล้วไปหน้า Checkout ได้ เห็นรายการสินค้าที่เพิ่งเพิ่มพร้อมราคารวม
 
 > ✅ **Checkpoint 0.1** ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) หน้า Home ที่แสดงรายการสินค้าจริงจาก API และ (ข) หน้า Checkout ที่มีสินค้าที่เพิ่มไว้ เป็นหลักฐานว่าโปรเจกต์ตั้งต้นถูกต้องสมบูรณ์ก่อนเริ่มทำเนื้อหา Gemini API ต่อ
+<img width="1292" height="976" alt="image" src="https://github.com/user-attachments/assets/6e360672-a0ae-4365-821c-7fe238a7fed6" />
+<img width="1287" height="972" alt="image" src="https://github.com/user-attachments/assets/6168e2e1-5735-488f-bf82-93104cb3464e" />
 
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
@@ -503,6 +505,8 @@ flutter run
 ในแผงตั้งค่าฝั่งขวาของ Google AI Studio เปิดตัวเลือก **Structured Output** เลือกที่ Visual Editor แล้วกำหนด Schema ให้ตรงกับ Field `title`, `category`, `description` ตามที่ใช้ใน Prompt (เลือกประเภทเป็น String ทั้งหมด) รันอีกครั้งด้วยภาพเดิม
 
 > ✅ **Checkpoint 1.2** ถ่ายภาพหน้าจอที่แสดงการตั้งค่า Structured Output และผลลัพธ์ที่ได้ อธิบายว่าผลลัพธ์ที่ได้ต่างจากตอนไม่เปิด Structured Output ในขั้นตอน 1.1 อย่างไร (อ้างอิงบทหนังสือเรียนหัวข้อ 7.4)
+<img width="1210" height="602" alt="Screenshot 2026-10-03 213807" src="https://github.com/user-attachments/assets/68345737-83a9-4e9d-beb8-a0642b52ce1e" />
+<img width="1007" height="198" alt="Screenshot 2026-10-03 214015" src="https://github.com/user-attachments/assets/5790aec4-78f3-4258-83e7-cb717dd91233" />
 
 ```text
 บันทึกผลลัพธ์ที่นี่
@@ -530,6 +534,7 @@ flutter run
 
 
 > ✅ **Checkpoint 2.1** รันแอปด้วยคำสั่ง `flutter run --dart-define=GEMINI_API_KEY=your_key` ถ่ายภาพหน้าจอ Debug Console และหน้า SnackBar ที่แสดงข้อความคำตอบจาก Gemini และอธิบายด้านล่าง ว่า `.timeout()` ที่ตั้งไว้กับ Gemini API (20 วินาที) ต่างจากที่ตั้งไว้กับ OpenWeather API ในสัปดาห์ที่แล้ว (10 วินาที) อย่างไร และทำไมจึงต่างกัน (อ้างอิงบทหนังสือเรียนหัวข้อ 7.3)
+<img width="1282" height="975" alt="image" src="https://github.com/user-attachments/assets/c32e3e25-b916-454c-9345-5315f8b14ba0" />
 
 ```text
 บันทึกผลลัพธ์ที่นี่
@@ -896,6 +901,8 @@ class MyApp extends StatelessWidget {
 > ⚠️ หลังแก้ `lib/main.dart` แล้วให้ **Stop แอปแล้วรัน `flutter run` ใหม่ทั้งหมด** (Hot Reload/Hot Restart ไม่พอ เพราะเป็นการเปลี่ยนโครงสร้าง Widget ตั้งแต่ราก (root) ของแอป)
 
 > ✅ **Checkpoint 3.1** รันแอปแล้วทดสอบกด Bottom Navigation Bar สลับไปมาระหว่าง "หน้าหลัก" กับ "ลงประกาศขาย" อย่างน้อย 3 รอบ ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) Tab หน้าหลักที่มี Bottom Navigation Bar แสดงอยู่ด้านล่าง และ (ข) Tab ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว จากนั้นทดสอบเพิ่มเติมว่าเลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่หรือไม่ (ถ้าหายไป แปลว่ายังใช้ `IndexedStack` ไม่ถูกต้อง ให้ตรวจสอบโค้ดใน `MainScaffold` อีกครั้ง) และทดสอบว่าไอคอนตะกร้าใน AppBar ของ Tab หน้าหลักยังกดไปหน้า Checkout ได้ตามปกติเหมือนที่ทดสอบไว้แล้วใน Checkpoint 0.1
+<img width="1287" height="972" alt="image" src="https://github.com/user-attachments/assets/f172489a-062f-4961-860a-5683f8174557" />
+<img width="1290" height="872" alt="image" src="https://github.com/user-attachments/assets/aef8485f-5d28-4831-804c-7fda3410cbab" />
 
 ```text
 บันทึกผลลัพธ์ที่นี่
@@ -944,6 +951,9 @@ class ListingDraft {
 แก้ไขปุ่มที่สร้างไว้ในขั้นตอน 3.2 ให้เรียก `GeminiVisionService().analyzeProductImage(...)` จริง จัดการ 3 สถานะให้ครบตามรูปแบบที่เรียนมาตั้งแต่สัปดาห์ที่ 6 (กำลังวิเคราะห์/สำเร็จ/ผิดพลาด) โดยระหว่างที่กำลังวิเคราะห์ให้แสดง `CircularProgressIndicator` พร้อมข้อความ "AI กำลังวิเคราะห์ภาพสินค้า..." (เพราะใช้เวลานานกว่าการโหลดข้อมูลจาก REST API ทั่วไปตามที่อธิบายในบทหนังสือเรียน)
 
 > ✅ **Checkpoint 4.1** รันแอปแล้วทดสอบเลือกภาพสินค้าจริง กดปุ่ม "ให้ AI ช่วยแนะนำ" ถ่ายภาพหน้าจอผลลัพธ์ที่ AI วิเคราะห์ได้ (title/category/description) ทดสอบซ้ำกับภาพสินค้าอย่างน้อย 3 ภาพที่ต่างกัน แนบภาพหน้าจอทั้ง 3 กรณี 
+<img width="1291" height="880" alt="image" src="https://github.com/user-attachments/assets/3212f971-a8bd-4e0e-9d91-f2625322b907" />
+<img width="1287" height="876" alt="image" src="https://github.com/user-attachments/assets/92a10788-d480-4792-926e-c956abb42bfb" />
+<img width="1295" height="872" alt="image" src="https://github.com/user-attachments/assets/e5df5758-d3d2-427a-9271-281d42ff5d9e" />
 
 ```text
 บันทึกผลลัพธ์ที่นี่
@@ -964,7 +974,10 @@ class ListingDraft {
 
 เพิ่มปุ่มที่เก็บค่าจากฟอร์ม (ซึ่งอาจถูกผู้ใช้แก้ไขแล้วหรือไม่ก็ได้) เป็นร่างประกาศฉบับสุดท้ายไว้ใน State ของแอป (ยังไม่ต้องบันทึกถาวร เพราะเรื่อง Local Database อยู่ในสัปดาห์ที่ 8) หลังยืนยันสำเร็จ ให้แสดง `SnackBar` ยืนยัน (เช่น "บันทึกร่างประกาศเรียบร้อยแล้ว") แล้วล้างฟอร์ม (รูปภาพที่เลือก, ค่าใน `TextEditingController` ทั้ง 3 ช่อง) กลับสู่สถานะว่างเปล่าพร้อมเริ่มลงประกาศใหม่ **ไม่ต้อง `Navigator.pop()`** เหมือนหน้าที่เปิดด้วย `Navigator.push` เพราะตอนนี้ `SellItemPage` เป็น Tab หนึ่งใน Bottom Navigation Bar แล้ว (ตั้งแต่ขั้นตอนที่ 3.3) ไม่ได้ถูกเปิดแบบ Push/Pop อีกต่อไป ผู้ใช้ที่ต้องการกลับหน้าหลักให้กดที่ Tab "หน้าหลัก" ด้านล่างจอเองแทน
 
-> ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ 2 ภาพเทียบกัน คือ (ก) ค่าที่ AI แนะนำมาตอนแรก และ (ข) ค่าหลังจากคุณแก้ไขบางส่วนแล้วกดยืนยัน 
+> ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ 2 ภาพเทียบกัน คือ (ก) ค่าที่ AI แนะนำมาตอนแรก และ (ข) ค่าหลังจากคุณแก้ไขบางส่วนแล้วกดยืนยัน
+<img width="1295" height="872" alt="image" src="https://github.com/user-attachments/assets/c5f89b44-0764-4423-aec6-fedf1301e2d1" />
+<img width="1262" height="132" alt="image" src="https://github.com/user-attachments/assets/3bce4c02-0b2d-424f-8dd9-c4c6e5b301c2" />
+
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
@@ -993,6 +1006,8 @@ class ListingDraft {
 รันแอปแล้วสังเกตว่าเกิดอะไรขึ้น (ควรได้ Error หรือ `finishReason: SAFETY` กลับมาตามโค้ดที่เขียนไว้ในขั้นตอนที่ 4.1)
 
 > ✅ **Checkpoint 6.1** ถ่ายภาพหน้าจอ Error ที่แอปแสดงเมื่อ Gemini ปฏิเสธคำขอ  จากนั้น**เปลี่ยน `_prompt` ใน `sell_item_page.dart` กลับเป็นเวอร์ชันที่ใช้งานจริงตามส่วนที่ 4** ก่อนส่งงาน ⚠️ ขั้นตอนนี้สำคัญมาก ถ้าลืมเปลี่ยนกลับ ฟีเจอร์หลักของแอปจะใช้งานไม่ได้เลย เพราะ Prompt ที่เหลือทิ้งไว้จะถูก Gemini บล็อกทุกครั้ง
+<img width="1282" height="652" alt="image" src="https://github.com/user-attachments/assets/d4c8e39e-79f8-4144-852c-0f1e5a37ac5e" />
+<img width="1280" height="767" alt="image" src="https://github.com/user-attachments/assets/be795334-657a-44d9-b328-79ea342317f5" />
 
 ```text
 บันทึกผลลัพธ์ที่นี่
