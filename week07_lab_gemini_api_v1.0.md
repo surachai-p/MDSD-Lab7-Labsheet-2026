@@ -505,6 +505,7 @@ flutter run
 บันทึกผลลัพธ์ที่นี่
 - promt
 <img width="630" height="647" alt="image" src="https://github.com/user-attachments/assets/2ba3ac09-a66c-4a04-92e6-fee0655c263f" />
+
 - 0
 {
 "title": "สายแปลง iBitzz USB-C 2-in-1 ชาร์จ+หูฟัง",
