@@ -461,9 +461,17 @@ flutter run
 
 > ✅ **Checkpoint 0.1** ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) หน้า Home ที่แสดงรายการสินค้าจริงจาก API และ (ข) หน้า Checkout ที่มีสินค้าที่เพิ่มไว้ เป็นหลักฐานว่าโปรเจกต์ตั้งต้นถูกต้องสมบูรณ์ก่อนเริ่มทำเนื้อหา Gemini API ต่อ
 
-```text
 บันทึกรูปผลลัพธ์ที่นี่
-```
+- หน้า Home
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/a8f6ac10-b4bd-44ca-8ac4-e9f3b84abc4a" />
+
+- กดปุ่ม "เพิ่มลงตะกร้า"
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/f72b16c8-cfc0-4609-ba69-8719675d298f" />
+
+-กดไอคอนตะกร้าแล้วไปหน้า Checkout ได้
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/b6e5b1da-0fed-40c2-b466-8dbd13f9e6b1" />
+
+
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -494,9 +502,30 @@ flutter run
 
 > ✅ **Checkpoint 1.1** ถ่ายภาพหน้าจอ Google AI Studio ที่แสดงรูปภาพที่แนบ Prompt ที่ใช้ และผลลัพธ์ JSON ที่ได้ จากนั้นทดลองรันซ้ำอีก 2 ครั้งด้วยภาพและ Prompt เดิม
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+บันทึกผลลัพธ์ที่นี่
+- promt
+<img width="630" height="647" alt="image" src="https://github.com/user-attachments/assets/2ba3ac09-a66c-4a04-92e6-fee0655c263f" />
+
+- 0
+{
+"title": "สายแปลง iBitzz USB-C 2-in-1 ชาร์จ+หูฟัง",
+"category": "อุปกรณ์อิเล็กทรอนิกส์",
+"description": "สายแปลง iBitzz สภาพดีมาก มาพร้อมที่ถนอมสายสีชมพูสุดน่ารัก ใช้งานได้ปกติทั้งชาร์จและเสียบหูฟังไปพร้อมกัน ตัวสายเป็นสายถักแข็งแรงทนทานครับ"
+}
+
+- 1
+{
+"title": "ตัวแปลง iBitzz USB-C ชาร์จ+ฟังเพลง",
+"category": "อุปกรณ์อิเล็กทรอนิกส์",
+"description": "สายแปลง iBitzz 2-in-1 สภาพดีมาก ใช้งานสะดวกชาร์จไปฟังเพลงไปได้พร้อมกัน ตัวสายเป็นสายถักแข็งแรงทนทาน มาพร้อมที่ถนอมสายสีชมพูสุดน่ารักครับ"
+}
+
+- 2
+{
+"title": "ตัวแปลง iBitzz USB-C ชาร์จ+ฟังเพลง",
+"category": "อุปกรณ์อิเล็กทรอนิกส์",
+"description": "ตัวแปลง iBitzz สภาพดีมาก ใช้งานได้ปกติทั้งชาร์จและเสียบหูฟังไปพร้อมกัน ตัวสายเป็นสายถักแข็งแรงทนทาน แถมที่ถนอมสายสีชมพูสุดน่ารักให้ด้วยครับ"
+}
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
@@ -504,9 +533,14 @@ flutter run
 
 > ✅ **Checkpoint 1.2** ถ่ายภาพหน้าจอที่แสดงการตั้งค่า Structured Output และผลลัพธ์ที่ได้ อธิบายว่าผลลัพธ์ที่ได้ต่างจากตอนไม่เปิด Structured Output ในขั้นตอน 1.1 อย่างไร (อ้างอิงบทหนังสือเรียนหัวข้อ 7.4)
 
-```text
 บันทึกผลลัพธ์ที่นี่
-```
+- ตั้งค่า
+<img width="908" height="697" alt="image" src="https://github.com/user-attachments/assets/337b74f8-842b-4eb8-b4ab-47be7e0e0009" />
+
+- ผลลัพธ์ที่ได้
+<img width="1187" height="132" alt="image" src="https://github.com/user-attachments/assets/f2bc97fc-3c45-4d01-bb56-bd2bf49a2d42" />
+
+ผลลัพธ์ที่ได้จากการเปิดใช้งาน Structured Output แตกต่างจากขั้นตอน Prompt ธรรมดา ที่ตัวโมเดลจะบังคับโครงสร้างข้อมูลให้ส่งกลับมาเป็น Valid JSON 100% โดยไม่มีข้อความเกริ่นนำ นี่คือคำอธิบายสินค้า... และไม่มี Markdown Fence json  ปะปนมา และฟิลด์ทุกตัว (title, category, description) ถูกล็อกให้มีชนิดข้อมูลเป็น String ตาม Schema อย่างเคร่งครัด ทำให้ฝั่งแอปพลิเคชัน Flutter สามารถนำข้อมูลไป Parse ด้วย jsonDecode() ได้อย่างเสถียร ไม่เกิดข้อผิดพลาดในการประมวลผล"
 
 ---
 
@@ -531,9 +565,9 @@ flutter run
 
 > ✅ **Checkpoint 2.1** รันแอปด้วยคำสั่ง `flutter run --dart-define=GEMINI_API_KEY=your_key` ถ่ายภาพหน้าจอ Debug Console และหน้า SnackBar ที่แสดงข้อความคำตอบจาก Gemini และอธิบายด้านล่าง ว่า `.timeout()` ที่ตั้งไว้กับ Gemini API (20 วินาที) ต่างจากที่ตั้งไว้กับ OpenWeather API ในสัปดาห์ที่แล้ว (10 วินาที) อย่างไร และทำไมจึงต่างกัน (อ้างอิงบทหนังสือเรียนหัวข้อ 7.3)
 
-```text
 บันทึกผลลัพธ์ที่นี่
-```
+<img width="1913" height="1068" alt="image" src="https://github.com/user-attachments/assets/e33bea67-8b24-41fa-a9de-d66f0a1052fc" />
+
 
 ---
 
@@ -897,9 +931,14 @@ class MyApp extends StatelessWidget {
 
 > ✅ **Checkpoint 3.1** รันแอปแล้วทดสอบกด Bottom Navigation Bar สลับไปมาระหว่าง "หน้าหลัก" กับ "ลงประกาศขาย" อย่างน้อย 3 รอบ ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) Tab หน้าหลักที่มี Bottom Navigation Bar แสดงอยู่ด้านล่าง และ (ข) Tab ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว จากนั้นทดสอบเพิ่มเติมว่าเลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่หรือไม่ (ถ้าหายไป แปลว่ายังใช้ `IndexedStack` ไม่ถูกต้อง ให้ตรวจสอบโค้ดใน `MainScaffold` อีกครั้ง) และทดสอบว่าไอคอนตะกร้าใน AppBar ของ Tab หน้าหลักยังกดไปหน้า Checkout ได้ตามปกติเหมือนที่ทดสอบไว้แล้วใน Checkpoint 0.1
 
-```text
 บันทึกผลลัพธ์ที่นี่
-```
+- (ก)
+<img width="337" height="797" alt="image" src="https://github.com/user-attachments/assets/c63b699e-5b64-4f29-ade1-36a453364e7e" />
+
+- (ข)
+<img width="337" height="777" alt="image" src="https://github.com/user-attachments/assets/d702539d-9ce9-4595-ad7d-61d33d675ff4" />
+
+สลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่
 
 ---
 
@@ -945,9 +984,10 @@ class ListingDraft {
 
 > ✅ **Checkpoint 4.1** รันแอปแล้วทดสอบเลือกภาพสินค้าจริง กดปุ่ม "ให้ AI ช่วยแนะนำ" ถ่ายภาพหน้าจอผลลัพธ์ที่ AI วิเคราะห์ได้ (title/category/description) ทดสอบซ้ำกับภาพสินค้าอย่างน้อย 3 ภาพที่ต่างกัน แนบภาพหน้าจอทั้ง 3 กรณี 
 
-```text
 บันทึกผลลัพธ์ที่นี่
-```
+<img width="316" height="736" alt="image" src="https://github.com/user-attachments/assets/ba7943c9-d078-409b-b3c1-55f64ca11b84" />
+
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
