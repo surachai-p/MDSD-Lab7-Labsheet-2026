@@ -464,6 +464,11 @@ flutter run
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+(ก)
+<img width="621" height="870" alt="image" src="https://github.com/user-attachments/assets/d1bdc5e3-90ae-4312-b020-ef3cf5fbea90" />
+(ข)
+<img width="605" height="874" alt="image" src="https://github.com/user-attachments/assets/ce0562c0-defb-4739-a15e-0e9c35bf8421" />
+
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -497,6 +502,8 @@ flutter run
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="1035" height="708" alt="image" src="https://github.com/user-attachments/assets/13fa279c-3f48-42f3-82ee-d7c88a91a389" />
+
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
@@ -507,6 +514,10 @@ flutter run
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="738" height="645" alt="image" src="https://github.com/user-attachments/assets/f649655a-89a1-427e-9245-2c1bb8478c4e" />
+<img width="1302" height="897" alt="image" src="https://github.com/user-attachments/assets/60844ed4-f549-4736-b3c9-eebd467ad4fe" />
+
+Structured Output บังคับโครงสร้าง JSON ให้เป๊ะและไม่มีข้อความส่วนเกิน ทำให้เอาไปเขียนโค้ดต่อได้ทันทีโดยไม่พัง ต่างจากการไม่เปิดที่โมเดลอาจพ่นข้อความคุยเล่นหรือจัดรูปแบบผิดพลาด
 
 ---
 
@@ -900,6 +911,11 @@ class MyApp extends StatelessWidget {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+ก
+<img width="491" height="1019" alt="image" src="https://github.com/user-attachments/assets/5e7d6867-5bf2-4d4f-a270-c49cb96a71b9" />
+ข
+<img width="491" height="1018" alt="image" src="https://github.com/user-attachments/assets/1212d39c-0c6e-4c6e-b6ae-a189be48c49c" />
+
 
 ---
 
@@ -948,6 +964,10 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="461" height="987" alt="image" src="https://github.com/user-attachments/assets/0f83ddd0-766f-42b7-9e14-f7c2ac03a386" />
+
+
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -968,6 +988,11 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+ก
+<img width="461" height="991" alt="image" src="https://github.com/user-attachments/assets/0fef5327-7e31-4f78-80b8-aa62fa106b01" />
+ข
+<img width="462" height="993" alt="image" src="https://github.com/user-attachments/assets/f0deeb4b-5c34-4851-85e0-c620c0365549" />
+
 
 ---
 
@@ -997,6 +1022,8 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="464" height="981" alt="image" src="https://github.com/user-attachments/assets/c388a2e2-0e88-4600-a1c1-541a57dec98c" />
+
 ---
 
 
