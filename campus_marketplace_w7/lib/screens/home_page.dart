@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,6 +8,7 @@ import '../repositories/item_repository.dart';
 import '../repositories/favorites_repository.dart';
 import '../repositories/listing_draft_repository.dart';
 import '../services/gemini_service.dart';
+import '../services/auth_service.dart';
 import 'checkout_page.dart';
 import 'sell_item_page.dart';
 
@@ -97,12 +99,28 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  // ออกจากระบบ Firebase
+  Future<void> signOut() async {
+    try {
+      await AuthService().signOut();
+    } catch (e) {
+      if (!mounted) return;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(e.toString()),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Campus Marketplace'),
         actions: [
+          // ปุ่มตะกร้าสินค้า
           IconButton(
             tooltip: 'ตะกร้าสินค้า',
             icon: Badge(
@@ -112,6 +130,13 @@ class _HomePageState extends State<HomePage> {
               child: const Icon(Icons.shopping_cart),
             ),
             onPressed: openCheckoutPage,
+          ),
+
+          // ปุ่มออกจากระบบ
+          IconButton(
+            tooltip: 'ออกจากระบบ',
+            icon: const Icon(Icons.logout),
+            onPressed: signOut,
           ),
         ],
       ),
@@ -238,7 +263,7 @@ class _HomePageState extends State<HomePage> {
                                   item.imageUrl,
                                 );
 
-                                if (!mounted) return;
+                                if (!context.mounted) return;
 
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(
@@ -250,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 );
                               } catch (e) {
-                                if (!mounted) return;
+                                if (!context.mounted) return;
 
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(
@@ -265,7 +290,7 @@ class _HomePageState extends State<HomePage> {
                             },
                           ),
 
-                          // ปุ่มเพิ่มลงตะกร้าเดิม
+                          // ปุ่มเพิ่มลงตะกร้า
                           IconButton(
                             tooltip: 'เพิ่มลงตะกร้า',
                             icon: const Icon(

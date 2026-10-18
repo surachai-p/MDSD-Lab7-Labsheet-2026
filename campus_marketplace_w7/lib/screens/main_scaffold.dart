@@ -1,21 +1,24 @@
+
 import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 import 'sell_item_page.dart';
 import 'favorites_page.dart';
+import 'my_drafts_page.dart';
 
 import '../repositories/item_repository.dart';
+import '../repositories/item_repository_firestore.dart';
 import '../repositories/favorites_repository.dart';
 import '../repositories/listing_draft_repository.dart';
 
 class MainScaffold extends StatefulWidget {
-  final ItemRepository itemRepository;
+  final List<ItemRepository> itemRepositories;
   final FavoritesRepository favoritesRepository;
   final ListingDraftRepository draftRepository;
 
   const MainScaffold({
     super.key,
-    required this.itemRepository,
+    required this.itemRepositories,
     required this.favoritesRepository,
     required this.draftRepository,
   });
@@ -33,9 +36,21 @@ class _MainScaffoldState extends State<MainScaffold> {
   void initState() {
     super.initState();
 
+    final firestoreRepository = widget.itemRepositories
+        .where(
+          (repository) => repository is ItemRepositoryFirestore,
+        )
+        .firstOrNull;
+
+    if (firestoreRepository == null) {
+      throw StateError(
+        'ไม่พบ ItemRepositoryFirestore ใน itemRepositories',
+      );
+    }
+
     _pages = [
       HomePage(
-        repository: widget.itemRepository,
+        repository: firestoreRepository,
         favoritesRepository: widget.favoritesRepository,
         draftRepository: widget.draftRepository,
       ),
@@ -45,20 +60,18 @@ class _MainScaffoldState extends State<MainScaffold> {
       FavoritesPage(
         repository: widget.favoritesRepository,
       ),
+      MyDraftsPage(
+        repository: widget.draftRepository,
+      ),
     ];
   }
 
+  // เปลี่ยนเฉพาะแท็บที่เลือก ไม่สร้างหน้าใหม่
   void _onTabSelected(int index) {
+    if (index == _selectedIndex) return;
+
     setState(() {
       _selectedIndex = index;
-
-      // สร้าง FavoritesPage ใหม่ทุกครั้งที่เปิด Tab รายการโปรด
-      // เพื่อโหลดข้อมูลล่าสุดจาก Drift Database
-      if (index == 2) {
-        _pages[2] = FavoritesPage(
-          repository: widget.favoritesRepository,
-        );
-      }
     });
   }
 
@@ -72,6 +85,7 @@ class _MainScaffoldState extends State<MainScaffold> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onTabSelected,
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.storefront),
@@ -84,6 +98,10 @@ class _MainScaffoldState extends State<MainScaffold> {
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'รายการโปรด',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.drafts),
+            label: 'ร่างประกาศของฉัน',
           ),
         ],
       ),
