@@ -463,7 +463,15 @@ flutter run
 
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
+
 ```
+(ก) หน้า Home ที่แสดงรายการสินค้าจริงจาก API และ
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/d7f7a667-dd36-4831-8116-9301b52d8172" />
+
+(ข) หน้า Checkout ที่มีสินค้าที่เพิ่มไว้ เป็นหลักฐานว่าโปรเจกต์ตั้งต้นถูกต้องสมบูรณ์ก่อนเริ่มทำเนื้อหา Gemini API ต่อ
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/492d55fc-041b-4e26-8b0f-fd3074c58273" />
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/73a49b4b-3c7e-4cc3-aaf5-ba102dc869eb" />
+
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -497,6 +505,8 @@ flutter run
 ```text
 บันทึกรูปผลลัพธ์ที่นี่
 ```
+<img width="799" height="201" alt="image" src="https://github.com/user-attachments/assets/17f3ca6c-240a-4c12-b979-ed3b54d92e3c" />
+
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
@@ -507,6 +517,7 @@ flutter run
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="745" height="568" alt="image" src="https://github.com/user-attachments/assets/1438ac4c-b326-4023-a03a-49c8c5e859bc" />
 
 ---
 
@@ -534,6 +545,7 @@ flutter run
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/0e1d49a9-5eb5-456a-b66a-5a46b0c1d592" />
 
 ---
 
@@ -900,6 +912,10 @@ class MyApp extends StatelessWidget {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/15830de2-9a0b-42db-9616-68a91b6ae002" />
+<img width="359" height="800" alt="image" src="https://github.com/user-attachments/assets/a196a3ec-6652-4b3a-8985-04953372453e" />
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/419188a0-d70a-479c-a14e-f959241c995c" />
+
 
 ---
 
@@ -948,6 +964,10 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/971ab1ca-84ea-4e4d-be89-0e8c954c6eab" />
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/8265d967-5180-4cc7-98cb-db520e03a5cd" />
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/10b16d84-c8cc-4c32-88fd-f9fe99838a01" />
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -968,6 +988,8 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/10b16d84-c8cc-4c32-88fd-f9fe99838a01" />
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/d5eaaee4-fe24-414f-9f9d-e3324802b112" />
 
 ---
 
@@ -997,6 +1019,8 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="964" height="2149" alt="image" src="https://github.com/user-attachments/assets/59ef1520-66bd-4627-912f-429d7b13eee1" />
+
 ---
 
 
