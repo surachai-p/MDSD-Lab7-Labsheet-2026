@@ -912,9 +912,19 @@ class MyApp extends StatelessWidget {
 
 > ✅ **Checkpoint 3.1** รันแอปแล้วทดสอบกด Bottom Navigation Bar สลับไปมาระหว่าง "หน้าหลัก" กับ "ลงประกาศขาย" อย่างน้อย 3 รอบ ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) Tab หน้าหลักที่มี Bottom Navigation Bar แสดงอยู่ด้านล่าง และ (ข) Tab ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว จากนั้นทดสอบเพิ่มเติมว่าเลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่หรือไม่ (ถ้าหายไป แปลว่ายังใช้ `IndexedStack` ไม่ถูกต้อง ให้ตรวจสอบโค้ดใน `MainScaffold` อีกครั้ง) และทดสอบว่าไอคอนตะกร้าใน AppBar ของ Tab หน้าหลักยังกดไปหน้า Checkout ได้ตามปกติเหมือนที่ทดสอบไว้แล้วใน Checkpoint 0.1
 
-```text
+
 บันทึกผลลัพธ์ที่นี่
-```
+- (ก) Tab หน้าหลักที่มี Bottom Navigation Bar แสดงอยู่ด้านล่าง
+<img width="342" height="797" alt="image" src="https://github.com/user-attachments/assets/74a0fb23-ed2d-4252-bc3f-c2064b6eb9c0" />
+
+- (ข) Tab ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว
+<img width="342" height="797" alt="image" src="https://github.com/user-attachments/assets/55644d92-6933-40bd-bde9-8555c45a1fdf" />
+
+- ทดสอบเพิ่มเติมว่าเลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่หรือไม่ 
+<img width="342" height="797" alt="image" src="https://github.com/user-attachments/assets/f4224c93-fc82-4d92-a1b1-16bbb8c47449" />
+<img width="342" height="797" alt="image" src="https://github.com/user-attachments/assets/874a105f-cf95-4b9a-b0b8-556a520cb8b9" />
+<img width="342" height="797" alt="image" src="https://github.com/user-attachments/assets/0d1866d2-4e4c-40ee-9f76-cd5347562ce6" />
+
 
 ---
 
@@ -960,9 +970,14 @@ class ListingDraft {
 
 > ✅ **Checkpoint 4.1** รันแอปแล้วทดสอบเลือกภาพสินค้าจริง กดปุ่ม "ให้ AI ช่วยแนะนำ" ถ่ายภาพหน้าจอผลลัพธ์ที่ AI วิเคราะห์ได้ (title/category/description) ทดสอบซ้ำกับภาพสินค้าอย่างน้อย 3 ภาพที่ต่างกัน แนบภาพหน้าจอทั้ง 3 กรณี 
 
-```text
+
 บันทึกผลลัพธ์ที่นี่
-```
+
+<img width="295" height="688" alt="image" src="https://github.com/user-attachments/assets/4c56a182-ab6c-4371-b990-22b4ab6417d4" />
+<img width="295" height="688" alt="image" src="https://github.com/user-attachments/assets/854d18ae-3fba-4360-8382-2073d636d8aa" />
+<img width="295" height="688" alt="image" src="https://github.com/user-attachments/assets/64c5e6d4-4ffe-4f65-8db0-49ca22c01574" />
+
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -980,9 +995,14 @@ class ListingDraft {
 เพิ่มปุ่มที่เก็บค่าจากฟอร์ม (ซึ่งอาจถูกผู้ใช้แก้ไขแล้วหรือไม่ก็ได้) เป็นร่างประกาศฉบับสุดท้ายไว้ใน State ของแอป (ยังไม่ต้องบันทึกถาวร เพราะเรื่อง Local Database อยู่ในสัปดาห์ที่ 8) หลังยืนยันสำเร็จ ให้แสดง `SnackBar` ยืนยัน (เช่น "บันทึกร่างประกาศเรียบร้อยแล้ว") แล้วล้างฟอร์ม (รูปภาพที่เลือก, ค่าใน `TextEditingController` ทั้ง 3 ช่อง) กลับสู่สถานะว่างเปล่าพร้อมเริ่มลงประกาศใหม่ **ไม่ต้อง `Navigator.pop()`** เหมือนหน้าที่เปิดด้วย `Navigator.push` เพราะตอนนี้ `SellItemPage` เป็น Tab หนึ่งใน Bottom Navigation Bar แล้ว (ตั้งแต่ขั้นตอนที่ 3.3) ไม่ได้ถูกเปิดแบบ Push/Pop อีกต่อไป ผู้ใช้ที่ต้องการกลับหน้าหลักให้กดที่ Tab "หน้าหลัก" ด้านล่างจอเองแทน
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ 2 ภาพเทียบกัน คือ (ก) ค่าที่ AI แนะนำมาตอนแรก และ (ข) ค่าหลังจากคุณแก้ไขบางส่วนแล้วกดยืนยัน 
-```text
+
 บันทึกผลลัพธ์ที่นี่
-```
+- (ก) ค่าที่ AI แนะนำมาตอนแรก
+<img width="295" height="688" alt="image" src="https://github.com/user-attachments/assets/f745e19c-c7a9-4eb9-b694-9cd0514d8e5f" />
+
+- (ข) ค่าหลังจากคุณแก้ไขบางส่วนแล้วกดยืนยัน 
+<img width="295" height="688" alt="image" src="https://github.com/user-attachments/assets/d2cdea7c-9850-4213-83b0-7ef572d38bc8" />
+<img width="295" height="688" alt="image" src="https://github.com/user-attachments/assets/c0ac209f-ff2a-4913-806f-c588b4f2ff94" />
 
 ---
 
@@ -1009,9 +1029,11 @@ class ListingDraft {
 
 > ✅ **Checkpoint 6.1** ถ่ายภาพหน้าจอ Error ที่แอปแสดงเมื่อ Gemini ปฏิเสธคำขอ  จากนั้น**เปลี่ยน `_prompt` ใน `sell_item_page.dart` กลับเป็นเวอร์ชันที่ใช้งานจริงตามส่วนที่ 4** ก่อนส่งงาน ⚠️ ขั้นตอนนี้สำคัญมาก ถ้าลืมเปลี่ยนกลับ ฟีเจอร์หลักของแอปจะใช้งานไม่ได้เลย เพราะ Prompt ที่เหลือทิ้งไว้จะถูก Gemini บล็อกทุกครั้ง
 
-```text
+
 บันทึกผลลัพธ์ที่นี่
-```
+
+<img width="295" height="688" alt="image" src="https://github.com/user-attachments/assets/625a224d-d49e-454f-a134-044084547bc1" />
+
 ---
 
 
