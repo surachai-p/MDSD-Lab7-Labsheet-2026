@@ -461,9 +461,10 @@ flutter run
 
 > ✅ **Checkpoint 0.1** ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) หน้า Home ที่แสดงรายการสินค้าจริงจาก API และ (ข) หน้า Checkout ที่มีสินค้าที่เพิ่มไว้ เป็นหลักฐานว่าโปรเจกต์ตั้งต้นถูกต้องสมบูรณ์ก่อนเริ่มทำเนื้อหา Gemini API ต่อ
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+<img width="345" height="660" alt="image" src="https://github.com/user-attachments/assets/09cbfd37-47b7-46dd-8225-53b906c5dca4" />
+
+<img width="342" height="658" alt="image" src="https://github.com/user-attachments/assets/d45bb7ad-17b8-4fbc-a611-cfb8ae67d416" />
+
 
 > ⚠️ ถ้าหน้าจอ Home แสดง Error เช่น "ไม่สามารถโหลดรายการสินค้าได้ (สถานะ 523)" ไม่ใช่ปัญหาจากไฟล์ที่คัดลอกมา แต่เป็น Fake Store API (fakestoreapi.com) ล่มชั่วคราว (Error ของ Cloudflare ที่แปลว่าเซิร์ฟเวอร์ต้นทางเข้าไม่ถึง) ให้รอแล้วลองใหม่ หรือแจ้งอาจารย์/TA เพื่อขอไฟล์ `ItemRepositoryMock` สำรองไว้ทดสอบโดยไม่ง้อเครือข่าย
 
@@ -494,19 +495,17 @@ flutter run
 
 > ✅ **Checkpoint 1.1** ถ่ายภาพหน้าจอ Google AI Studio ที่แสดงรูปภาพที่แนบ Prompt ที่ใช้ และผลลัพธ์ JSON ที่ได้ จากนั้นทดลองรันซ้ำอีก 2 ครั้งด้วยภาพและ Prompt เดิม
 
-```text
-บันทึกรูปผลลัพธ์ที่นี่
-```
+<img width="1366" height="768" alt="Screenshot (951)" src="https://github.com/user-attachments/assets/f40e2224-98d6-4006-b3de-3aad8696e9e3" />
 
 ### ขั้นตอนที่ 1.2: ทดลองเปิดใช้ Structured Output ใน AI Studio
 
 ในแผงตั้งค่าฝั่งขวาของ Google AI Studio เปิดตัวเลือก **Structured Output** เลือกที่ Visual Editor แล้วกำหนด Schema ให้ตรงกับ Field `title`, `category`, `description` ตามที่ใช้ใน Prompt (เลือกประเภทเป็น String ทั้งหมด) รันอีกครั้งด้วยภาพเดิม
 
 > ✅ **Checkpoint 1.2** ถ่ายภาพหน้าจอที่แสดงการตั้งค่า Structured Output และผลลัพธ์ที่ได้ อธิบายว่าผลลัพธ์ที่ได้ต่างจากตอนไม่เปิด Structured Output ในขั้นตอน 1.1 อย่างไร (อ้างอิงบทหนังสือเรียนหัวข้อ 7.4)
+> 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/da64050f-eb45-4474-937a-53f85bc8e39a" />
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="1366" height="768" alt="Screenshot (955)" src="https://github.com/user-attachments/assets/e6978b82-078a-4f14-af76-37925c6e756e" />
 
 ---
 
@@ -531,9 +530,9 @@ flutter run
 
 > ✅ **Checkpoint 2.1** รันแอปด้วยคำสั่ง `flutter run --dart-define=GEMINI_API_KEY=your_key` ถ่ายภาพหน้าจอ Debug Console และหน้า SnackBar ที่แสดงข้อความคำตอบจาก Gemini และอธิบายด้านล่าง ว่า `.timeout()` ที่ตั้งไว้กับ Gemini API (20 วินาที) ต่างจากที่ตั้งไว้กับ OpenWeather API ในสัปดาห์ที่แล้ว (10 วินาที) อย่างไร และทำไมจึงต่างกัน (อ้างอิงบทหนังสือเรียนหัวข้อ 7.3)
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="340" height="662" alt="image" src="https://github.com/user-attachments/assets/6fa368fb-86e0-4f47-b6c0-6d7c854cc9aa" />
+
+<img width="661" height="304" alt="image" src="https://github.com/user-attachments/assets/e4638733-e14e-4f26-be18-375abc5916f2" />
 
 ---
 
@@ -897,9 +896,14 @@ class MyApp extends StatelessWidget {
 
 > ✅ **Checkpoint 3.1** รันแอปแล้วทดสอบกด Bottom Navigation Bar สลับไปมาระหว่าง "หน้าหลัก" กับ "ลงประกาศขาย" อย่างน้อย 3 รอบ ถ่ายภาพหน้าจอ 2 ภาพ คือ (ก) Tab หน้าหลักที่มี Bottom Navigation Bar แสดงอยู่ด้านล่าง และ (ข) Tab ลงประกาศขายที่เลือกรูปภาพสินค้าไว้แล้ว จากนั้นทดสอบเพิ่มเติมว่าเลือกรูปภาพไว้ใน Tab ลงประกาศขาย แล้วสลับไป Tab หน้าหลักแล้วสลับกลับมา รูปภาพที่เลือกไว้ยังอยู่หรือไม่ (ถ้าหายไป แปลว่ายังใช้ `IndexedStack` ไม่ถูกต้อง ให้ตรวจสอบโค้ดใน `MainScaffold` อีกครั้ง) และทดสอบว่าไอคอนตะกร้าใน AppBar ของ Tab หน้าหลักยังกดไปหน้า Checkout ได้ตามปกติเหมือนที่ทดสอบไว้แล้วใน Checkpoint 0.1
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="333" height="656" alt="Screenshot 2026-11-05 004254" src="https://github.com/user-attachments/assets/1c8a58a5-bd08-4d26-b5f6-8a24536c655f" />
+<img width="342" height="659" alt="Screenshot 2026-11-05 004530" src="https://github.com/user-attachments/assets/fe7cb428-b33f-4262-b17e-ac6577356f5d" />
+
+<img width="338" height="661" alt="image" src="https://github.com/user-attachments/assets/2ddf91aa-e0d6-4acb-a964-e9790f5bacce" />
+<img width="345" height="661" alt="image" src="https://github.com/user-attachments/assets/2bfc16fe-d525-48be-a6bd-10b01e77affb" />
+
+<img width="338" height="659" alt="image" src="https://github.com/user-attachments/assets/7a94906a-1f07-4b7f-b41e-a57db1580a6c" />
+<img width="345" height="661" alt="image" src="https://github.com/user-attachments/assets/78f7bb5d-12be-48f0-9c5d-f370f23e8cad" />
 
 ---
 
@@ -945,9 +949,12 @@ class ListingDraft {
 
 > ✅ **Checkpoint 4.1** รันแอปแล้วทดสอบเลือกภาพสินค้าจริง กดปุ่ม "ให้ AI ช่วยแนะนำ" ถ่ายภาพหน้าจอผลลัพธ์ที่ AI วิเคราะห์ได้ (title/category/description) ทดสอบซ้ำกับภาพสินค้าอย่างน้อย 3 ภาพที่ต่างกัน แนบภาพหน้าจอทั้ง 3 กรณี 
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="342" height="664" alt="image" src="https://github.com/user-attachments/assets/7cdda4cf-d622-47e5-81c8-da8396ffcbb9" />
+
+<img width="343" height="659" alt="image" src="https://github.com/user-attachments/assets/4f6842af-8e55-4fee-8b1b-c2108fab37be" />
+
+<img width="337" height="666" alt="image" src="https://github.com/user-attachments/assets/dae5b19f-1c39-4b9b-ab3d-f3c1ac8ad32c" />
+
 ---
 
 ## ส่วนที่ 5: ออกแบบหน้าจอตรวจทานและแก้ไขก่อนยืนยัน (Human-in-the-loop)
@@ -965,9 +972,12 @@ class ListingDraft {
 เพิ่มปุ่มที่เก็บค่าจากฟอร์ม (ซึ่งอาจถูกผู้ใช้แก้ไขแล้วหรือไม่ก็ได้) เป็นร่างประกาศฉบับสุดท้ายไว้ใน State ของแอป (ยังไม่ต้องบันทึกถาวร เพราะเรื่อง Local Database อยู่ในสัปดาห์ที่ 8) หลังยืนยันสำเร็จ ให้แสดง `SnackBar` ยืนยัน (เช่น "บันทึกร่างประกาศเรียบร้อยแล้ว") แล้วล้างฟอร์ม (รูปภาพที่เลือก, ค่าใน `TextEditingController` ทั้ง 3 ช่อง) กลับสู่สถานะว่างเปล่าพร้อมเริ่มลงประกาศใหม่ **ไม่ต้อง `Navigator.pop()`** เหมือนหน้าที่เปิดด้วย `Navigator.push` เพราะตอนนี้ `SellItemPage` เป็น Tab หนึ่งใน Bottom Navigation Bar แล้ว (ตั้งแต่ขั้นตอนที่ 3.3) ไม่ได้ถูกเปิดแบบ Push/Pop อีกต่อไป ผู้ใช้ที่ต้องการกลับหน้าหลักให้กดที่ Tab "หน้าหลัก" ด้านล่างจอเองแทน
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ 2 ภาพเทียบกัน คือ (ก) ค่าที่ AI แนะนำมาตอนแรก และ (ข) ค่าหลังจากคุณแก้ไขบางส่วนแล้วกดยืนยัน 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+ก
+<img width="343" height="654" alt="image" src="https://github.com/user-attachments/assets/3780787e-f7b7-4f36-a4ef-bfcc21860600" />
+ข
+<img width="341" height="657" alt="Screenshot 2026-11-05 030906" src="https://github.com/user-attachments/assets/b7297f67-d0a8-46cf-acbe-1150ddf72f8a" />
+
+<img width="335" height="660" alt="image" src="https://github.com/user-attachments/assets/f09eba5a-885b-468d-918a-d2cc82ed7a74" />
 
 ---
 
@@ -994,9 +1004,8 @@ class ListingDraft {
 
 > ✅ **Checkpoint 6.1** ถ่ายภาพหน้าจอ Error ที่แอปแสดงเมื่อ Gemini ปฏิเสธคำขอ  จากนั้น**เปลี่ยน `_prompt` ใน `sell_item_page.dart` กลับเป็นเวอร์ชันที่ใช้งานจริงตามส่วนที่ 4** ก่อนส่งงาน ⚠️ ขั้นตอนนี้สำคัญมาก ถ้าลืมเปลี่ยนกลับ ฟีเจอร์หลักของแอปจะใช้งานไม่ได้เลย เพราะ Prompt ที่เหลือทิ้งไว้จะถูก Gemini บล็อกทุกครั้ง
 
-```text
-บันทึกผลลัพธ์ที่นี่
-```
+<img width="337" height="657" alt="image" src="https://github.com/user-attachments/assets/e107dfb2-c9fa-4ff6-9ef2-051cbd711a84" />
+
 ---
 
 
