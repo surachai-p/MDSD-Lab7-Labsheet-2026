@@ -537,6 +537,7 @@ flutter run
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="399" height="889" alt="ภาพถ่ายหน้าจอ 2569-11-05 เวลา 16 11 36" src="https://github.com/user-attachments/assets/c4eb3e92-c457-4c77-a9c9-e4cf1572dad5" />
 
 ---
 
@@ -903,6 +904,8 @@ class MyApp extends StatelessWidget {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="399" height="891" alt="ภาพถ่ายหน้าจอ 2569-11-05 เวลา 16 27 06" src="https://github.com/user-attachments/assets/500ac89f-aeba-48bf-abfd-72b5eaf0c4ad" />
+<img width="399" height="889" alt="ภาพถ่ายหน้าจอ 2569-11-05 เวลา 16 27 39" src="https://github.com/user-attachments/assets/af5c10b0-23a0-45e4-b5ab-1de828448b74" />
 
 ---
 
@@ -971,6 +974,7 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="401" height="885" alt="ภาพถ่ายหน้าจอ 2569-11-05 เวลา 16 33 43" src="https://github.com/user-attachments/assets/ebf13308-860a-4a24-97b4-e6197cb50820" />
 
 ---
 
@@ -1000,6 +1004,9 @@ class ListingDraft {
 ```text
 บันทึกผลลัพธ์ที่นี่
 ```
+<img width="401" height="889" alt="ภาพถ่ายหน้าจอ 2569-11-05 เวลา 16 11 07" src="https://github.com/user-attachments/assets/716546d4-b0a0-4947-a0cc-3b900d4b73ef" />
+<img width="399" height="889" alt="ภาพถ่ายหน้าจอ 2569-11-05 เวลา 16 11 36" src="https://github.com/user-attachments/assets/e54eef56-f84d-4bf8-b3d8-f1993dae63c0" />
+
 ---
 
 
